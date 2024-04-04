@@ -6,24 +6,28 @@ const ejemplo = [
   {
     id: 1,
     nombre: "ejemplo1",
-    pagada: false,
+    pagada: true,
     descripcion: "ejemplo 1 descripcion",
+    fecha_registro: "12-12-2015",
+    fecha_pago: "13-12-2015",
+    importe: 12,
   },
   {
     id: 2,
-    nombre: "ejemplo2",
+    nombre: "ejemplo1",
     pagada: true,
-    descripcion: "ejemplo 2 descripcion",
+    descripcion: "ejemplo 1 descripcion",
+    fecha_registro: "12-12-2015",
+    fecha_pago: "13-12-2015",
+    importe: 12,
   },
 ];
 ---
 
 <Layout title="Facturas">
-  <main class="py-2 px-2 mx-auto max-w-xl lg:py-0 lg:px-6">
-    <div class="mx-auto text-center mb-6 lg:mb-10">
-      <div class="flex flex-col">
-        <FacturaCard data={ejemplo} client:load />
-      </div>
+  <main class="py-2 px-2 mx-auto max-w-full lg:py-0 lg:px-6">
+    <div class="mx-auto mb-6 lg:mb-10 text-center">
+      <FacturaCard data={ejemplo} client:load />
     </div>
   </main>
 </Layout>

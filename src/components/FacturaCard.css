@@ -1,39 +1,43 @@
-.factura_container{
-    background-color: #afadad;
+.factura_container, .facturas_grid_leyenda{
+    background-color: white;
     padding: 0.3em;
     border-radius: 0.3em;
     margin: 0.1em;
     display: flex;
-    justify-content: space-between;
+    justify-content: left;
 }
 
-.factura_titulo{
-    background-color: #e8e8e8;
+.factura_titulo, .factura_titulo_leyenda{
+    width: 40%;
     padding: 0.4em;
-    width: 80%;
+    
 }
 
-.factura_borrar{
-    background-color: rgb(239, 93, 93);
-    padding: 0.4em;
-    width: 40px;
+.factura_id, .factura_id_leyenda{
+  padding: 0.4em;
+  width: 10%;
 }
 
-.factura_botones{
-    display: flex;
-    justify-content: space-between;
+.factura_fecha_inicio, .factura_fecha_inicio_leyenda{
+  width: 12%;
+  padding: 0.4em;
 }
 
-.factura_info{
-    background-color: rgb(232, 206, 102);
-    padding: 0.4em;
-    margin-left: 0.3em;
-    width: 40px;
+.factura_fecha_final, .factura_fecha_final_leyenda{
+  width: 12%;
+  padding: 0.4em;
 }
 
-.factura_borrar, .factura_info:hover{
-    cursor: pointer;
+.factura_precio, .factura_precio_leyenda{
+  width: 12%;
+  padding: 0.4em;
 }
+
+
+.facturas_grid_leyenda{
+  background-color: #afadad;
+}
+
 
 .modal-overlay {
     position: fixed;
