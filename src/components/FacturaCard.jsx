@@ -16,13 +16,14 @@ const FacturaCard = ({data}) =>{
 
 
     const facturasArray = VerFacturasArray.map((factura) => (
-        <div key={factura.id} className="factura_container" >
-          
-            <div className="factura_titulo" onClick={() => facturaClick(factura)}>{factura.nombre}</div>
+        <div key={factura.id} className="factura_container" onClick={() => facturaClick(factura)}>
+          <div className="factura_id">{factura.id}</div>
+            <div className="factura_titulo" >{factura.nombre}</div>
             <div className="factura_fecha_inicio">{factura.fecha_registro}</div>
             <div className="factura_fecha_final">{factura.fecha_pago}</div>
             <div className="factura_precio">{factura.importe}€</div>
-            <div className="factura_id">{factura.id}</div>
+            <div className="factura_pagada">{factura.pagada ? "si":"no"}</div>
+            
             
             
         </div>
@@ -34,12 +35,12 @@ const FacturaCard = ({data}) =>{
     return(
         <div>
         <div className="facturas_grid_leyenda">
-        
-            <div className="factura_titulo_leyenda">Factura</div>
-        <div className="factura_fecha_inicio_leyenda">Fecha inicio</div>
-        <div className="factura_fecha_final_leyenda">Fecha Final</div>
-        <div className="factura_precio_leyenda">Coste</div>   
         <div className="factura_id_leyenda">ID</div>
+            <div className="factura_titulo_leyenda">Factura</div>
+        <div className="factura_fecha_inicio_leyenda">Fecha Registro</div>
+        <div className="factura_fecha_final_leyenda">Fecha Pago</div>
+        <div className="factura_precio_leyenda">Importe</div>   
+        <div className="factura_pagada_leyenda">Pagada</div>
         </div>    
         {facturasArray}
          {showModal && createPortal(

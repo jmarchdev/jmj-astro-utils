@@ -10,6 +10,9 @@
 .factura_titulo, .factura_titulo_leyenda{
     width: 40%;
     padding: 0.4em;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
     
 }
 
@@ -21,6 +24,7 @@
 .factura_fecha_inicio, .factura_fecha_inicio_leyenda{
   width: 12%;
   padding: 0.4em;
+  
 }
 
 .factura_fecha_final, .factura_fecha_final_leyenda{
@@ -33,6 +37,10 @@
   padding: 0.4em;
 }
 
+.factura_pagada, .factura_pagada_leyenda{
+  width: 12%;
+  padding: 0.4em;
+}
 
 .facturas_grid_leyenda{
   background-color: #afadad;
