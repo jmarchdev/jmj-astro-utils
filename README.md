@@ -1,7 +1,7 @@
-# Astro Starter Kit: Basics
+# JMJ UTILS
 
 ```sh
-npm run dev
+web de gestion y monitorización de facturas y proyectos
 ```
 
 > **PROYECTO ASTRO, CON TAILWINDCSS Y REACT**
