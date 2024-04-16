@@ -1,7 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { db, Proyecto, Factura } from "astro:db";
+import ProyectoCard from "../components/ProyectoCard";
+
+const proyectos = await db.select().from(Proyecto);
 ---
 
 <Layout title="Proyectos">
-  <div></div>
+  <main class="py-2 px-2 mx-auto max-w-full lg:py-0 lg:px-6">
+    <div class="mx-auto mb-6 lg:mb-10">
+      <ProyectoCard data={proyectos} client:load />
+    </div>
+  </main>
 </Layout>
