@@ -1,0 +1,15 @@
+---
+import Layout from "../layouts/Layout.astro";
+import FacturaCard from "../components/FacturaCard";
+import { db, Factura, Proyecto } from "astro:db";
+
+const facturas = await db.select().from(Factura);
+---
+
+<Layout title="Facturas">
+  <main class="py-2 px-2 mx-auto max-w-full lg:py-0 lg:px-6">
+    <div class="mx-auto mb-6 lg:mb-10 text-center">
+      <FacturaCard data={facturas} client:load />
+    </div>
+  </main>
+</Layout>
