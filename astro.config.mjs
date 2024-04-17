@@ -9,5 +9,7 @@ import vercel from "@astrojs/vercel/serverless";
 export default defineConfig({
   integrations: [tailwind(), react(), db()],
   output: "server",
-  adapter: vercel()
+  adapter: vercel({
+    includeFiles: ['./users.json'],
+  })
 });
